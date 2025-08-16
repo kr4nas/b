@@ -9,7 +9,7 @@ body {
     color: #6e6e6e; 
     padding: 20px; 
     margin: 0; 
-    background-image: url('https://raw.githubusercontent.com/kr4nas/a/refs/heads/main/фон_пк.jpg'); 
+    background-image: url('https://raw.githubusercontent.com/kr4nas/b/refs/heads/main/фон_пк.jpg'); 
     background-size: cover; 
     background-attachment: fixed;
     background-position: center;
@@ -150,7 +150,7 @@ select, input[type="date"] {
 }
 @media (max-width: 992px) {
     body {
-        background-image: url('https://raw.githubusercontent.com/kr4nas/a/refs/heads/main/фон_мобильный.jpg'); 
+        background-image: url('https://raw.githubusercontent.com/kr4nas/b/refs/heads/main/фон_мобильный.jpg'); 
     }
     .a {
         font-size: 0.8em;
@@ -201,4 +201,5 @@ caption {
     padding-bottom: 10px; 
     font-weight: bold;
     color: #b0c6eb;
+
 }
