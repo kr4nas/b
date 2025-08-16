@@ -47,7 +47,7 @@ document.getElementById('r-form').addEventListener('submit', function(event) {
     if (group && date) {
         const [year, month, day] = date.split('-');
         const formattedDate = `${day}.${month}.${year}`; 
-        const folderPath = `https://kr4nas.github.io/a/${date}/`; 
+        const folderPath = `https://kr4nas.github.io/b/${date}/`; 
         fetch(folderPath + `${group}.txt`)
             .then(response => {
                 console.log('Response status:', response.status); 
@@ -99,7 +99,7 @@ document.getElementById('edit').addEventListener('click', function() {
     const scheduleEditDiv = document.querySelector('.save');
     if (group && date ) {
         const [year, month, day] = date.split('-');
-        const folderPath = `https://kr4nas.github.io/a/${date}/`; 
+        const folderPath = `https://kr4nas.github.io/b/${date}/`; 
         fetch(folderPath + `${group}.txt`)
             .then(response => {
                 if (!response.ok) {
@@ -130,7 +130,7 @@ document.getElementById('save-button').addEventListener('click', function() {
     const group = groupSelect.value; 
     const date = document.getElementById('date').value; 
     const scheduleData = document.getElementById('save-textarea').value; 
-    const folderPath = `https://kr4nas.github.io/a/${date}/`; 
+    const folderPath = `https://kr4nas.github.io/b/${date}/`; 
     const filePath = `${folderPath}${group}.txt`;
     fetch(filePath, {
         method: 'PUT',
@@ -149,4 +149,5 @@ document.getElementById('save-button').addEventListener('click', function() {
         console.error('Ошибка:', error); 
         alert('Ошибка при сохранении расписания.');
     });
+
 });
