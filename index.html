@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="AA.png" />
+    <title>УИПК. Расписание занятий</title>
+</head>
+<body>
+    <div class="a">
+        <img src="logotip.png" alt="Логотип колледжа">
+        <h1>Государственное профессиональное образовательное учреждение Ярославской области<br>Угличский индустриально-педагогический колледж</h1>
+    </div>
+    <div class="b">
+        <button type="button" id="auth" onclick="window.location.href='login.html'">Авторизация</button>
+    </div>
+    <div class="exit" style="display: none;">
+        <button type="button" id="exit">Выйти из профиля</button>
+    </div>
+    <main>
+        <form id="r-form">
+            <p>
+                <label for="c">Выберите курс:</label>
+                <select id="c">
+                    <option value="">Выберите курс</option>
+                    <option value="c1">1 курс</option>
+                    <option value="c2">2 курс</option>
+                    <option value="c3">3 курс</option>
+                    <option value="c4">4 курс</option>
+                    <option value="c5">5 курс</option>
+                </select>
+            </p>
+            <p>
+                <label for="g">Выберите группу:</label>
+                <select id="g">
+                    <option value="">Выберите группу</option>
+                </select>
+            </p>
+            <p>
+                <label for="date">Выберите дату:</label>
+                <input type="date" id="date" required>
+            </p>
+                <button type="submit">Показать расписание</button>   
+        </form>
+        <div class="edit" style="display: none;">
+            <button type="button" id="edit">Редактировать расписание</button>
+        </div>
+        <div class="save" style="display: none;">
+            <textarea id="save-textarea" rows="10" cols="50"></textarea>
+            <button type="button" id="save-button">Сохранить изменения</button>
+        </div>
+    </main>
+    <div id="r"></div>
+    <script src="script.js"></script>
+</body>
+<footer class="z">
+    Углич, 2024
+</footer>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="AA.png" />
+    <title>УИПК. Авторизация пользователя</title>
+</head>
+<body>
+    <div class="co">
+        <div class="a-co">
+            <form id="auth-form" autocomplete="off">
+                <div class="f">
+                    <label for="username">Логин:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="f">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="f">
+                    <button type="submit">Авторизоваться</button>
+                    <button id="back-button" onclick="goBack()">Вернуться назад</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="r"></div>
+    <script>
+        document.getElementById('auth-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username === 'А' && password === 'А') {
+                sessionStorage.setItem('isAuthenticated', 'true');
+                window.location.href = 'index.html';
+            } else {
+                alert('Неверный логин или пароль');
+            }
+        });
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+<footer class="z">
+    Углич, 2024
+</footer>
+</html>
